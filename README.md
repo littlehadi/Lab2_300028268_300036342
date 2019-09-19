@@ -6,11 +6,11 @@ Development using UML and Java](http://www.site.uottawa.ca/school/research/llose
 by [Timothy C. Lethbridge](http://www.eecs.uottawa.ca/~tcl) and
 [Robert Laganière](http://www.eecs.uottawa.ca/~laganier).
 
-# Lab 2 (given as Assignment 1)
+# Lab 2 (to introduce Assignment 1)
 
 Assignment Submission before September 28, 9:30am using [BrightSpace](https://uottawa.brightspace.com/)
 
-During the lab 2, you will start working on your assignment 2. The TA will explain how to setup your environment, how to measure the execution time of a Java program and HOW TO DEBUG!
+During the lab 2, you will start working on your assignment 1. The TA will explain how to setup your environment, how to measure the execution time of a Java program and HOW TO DEBUG!
 You can clone this repository using the following command:
 
 ```
@@ -31,8 +31,8 @@ Your **private** repository should be named \[prefix\]-\[student-number-1\]_\[st
 lab02-1484511_90210901210
 ```
 
-When finished, submit a text file named after your student numbers (xxxxx_yyyyy.txt)
-with the lower student number first.  For example,
+When finished, submit a text file named after your student numbers (xxxxx_yyyyy.txt).
+For example,
 
 ```
 lab02-1484511_90210901210.txt
@@ -41,11 +41,10 @@ lab02-1484511_90210901210.txt
 Within the file please include:
 
 * Your names and students numbers
-* A link to your last commit in your lab02 branch in GitHub
-* A link to your pull request (PR) of lab02 branch into master
+* A link to your GitHub repository.
+* A link to the your last commit. 
 
-
-Your GitHub repository should contain all solutions to the Assignment 1/Lab2,
+Your GitHub repository should contain all solutions to the Assignment 1,
 no solution submissions via BrightSpace will be evaluated. 
 Only the information above should be submitted to BrightSpace.
 
