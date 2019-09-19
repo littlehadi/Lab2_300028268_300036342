@@ -6,10 +6,10 @@ Development using UML and Java](http://www.site.uottawa.ca/school/research/llose
 by [Timothy C. Lethbridge](http://www.eecs.uottawa.ca/~tcl) and
 [Robert Laganière](http://www.eecs.uottawa.ca/~laganier).
 
-# Lab 2
+# Lab 2 (given as Assignment 1)
 
 Assignment Submission before September 28, 9:30am using [BrightSpace](https://uottawa.brightspace.com/)
-
+During the lab 2, you will start working on your assignment 2. The TA will explain how to setup your environment, how to measure the execution time of a Java program and HOW TO DEBUG!
 You can clone this repository using the following command:
 
 ```
