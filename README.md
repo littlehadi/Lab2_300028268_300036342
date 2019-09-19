@@ -10,21 +10,20 @@ by [Timothy C. Lethbridge](http://www.eecs.uottawa.ca/~tcl) and
 
 Assignment Submission before September 28, 9:30am using [BrightSpace](https://uottawa.brightspace.com/)
 
-You can clone this repository using the following invitation
+You can clone this repository using the following command:
 
 ```
-https://classroom.github.com/g/s_NMrvbq
+https://github.com/SEG2105-uottawa/SEG2105-Lab2.git
 ```
 
 Group work and partners: In this lab, and all other labs that involve programming, you
 will work in **groups of two**. If you have not previously arranged to work with someone
-in your lab section, then you will have to find someone immediately. If there are an
-odd number of students, the TA may permit an individual to work alone for now.
+in your lab section, then you will have to find someone immediately. You can also work individually. 
 No groups of 3 will be permitted.
 
 ## Format
 
-Your repository should be named \[prefix\]-\[student-number-1\]_\[student-number-2\], for example
+Your **private** repository should be named \[prefix\]-\[student-number-1\]_\[student-number-2\], for example
 
 
 ```
@@ -44,14 +43,6 @@ Within the file please include:
 * A link to your last commit in your lab02 branch in GitHub
 * A link to your pull request (PR) of lab02 branch into master
 
-For example
-
-```
-Andrew Forward 1484511
-Ayana Nurse 90210901210
-https://github.com/professor-forward/lab02-1484511_90210901210/commit/a7187f5a2270495e02adb52b9eb0746d52c3d63b
-https://github.com/professor-forward/lab02-1484511_90210901210/pull/1
-```
 
 Your GitHub repository should contain all solutions to the Assignment 1/Lab2,
 no solution submissions via BrightSpace will be evaluated. 
@@ -73,7 +64,7 @@ your work.
 #### Using Eclipse
 
 You will be using Eclipse in this lab. [Instructions on how to get started](http://www.site.uottawa.ca/~mgarz042/SEG2105/assignments/Lab1_Getting_Started.html)
-in the lab.
+in the lab. An updated version of the instructions will be presented at the beginning of the lab. 
 
 
 #### Exercises
@@ -107,7 +98,7 @@ To run the program
 ```
 java PointCPTest
 ```
-
+You can, of course, run the programs using the Eclipse IDE (or your preferred IDE).
 Now create a branch for this lab called `f/lab02`
 
 ```
@@ -164,7 +155,7 @@ the median result as your definitive result, plus give the maximum and minimum.
 
 ## ARRAYS
 
-7. Compare the performance of ArrayList, Vector and ordinary arrays.
+7. Compare the performance of LinkedList, ArrayList and ordinary arrays.
 You should do a series of experiments where you do each of the
 following tests with the three types of collection,
 timing the execution of each run.
@@ -172,9 +163,9 @@ timing the execution of each run.
 You should run each case several times on the same computer to
 obtain stable average timings.
 
-a. Construct very large collections by putting random integers into each collection one at a time. The random integers should range in value from zero to nine. You should make each collection large enough so that the run takes at least 10 seconds to add the integers in the case of an ArrayList. You will have to do some initial experiments to find out what is a good size. You would use the same size of collection for ArrayList, Vector and the array. The ArrayList and Vector can be created by successively adding items and allowing them to grow, while the array has to be created at its full size and then populated with its contents. You could also try to experiment with the case where you do create the ArrayList and Vector initially with their full size.
+a. Construct very large collections by putting random floats into each collection one at a time. The random floats should range in value from zero to 9.0. You should make each collection large enough so that the run takes at least 10 seconds to add the floats in the case of an ArrayList. You will have to do some initial experiments to find out what is a good size. You would use the same size of collection for ArrayList, LinkedList and the array. The ArrayList and LinkedList can be created by successively adding items and allowing them to grow, while the array has to be created at its full size and then populated with its contents. You could also try to experiment with the case where you do create the ArrayList and LinkedList initially with their full size.
 
-b. Construct very large collections as in (a). Then use iterators to sum the elements. Subtract the construction time to get a measure of how much time the iteration takes. Use a for loop for the array, and an Iterator for the Vector and ArrayList.
+b. Construct very large collections as in (a). Then use iterators to sum the elements. Subtract the construction time to get a measure of how much time the iteration takes. Use a for loop for the array, and an Iterator for the LinkedList and ArrayList.
 
 Overwrite the [ARRAY.md](/pointcp/ARRAY.md) to present your data in
 suitable tables and draw conclusions from an analysis of the data.
