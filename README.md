@@ -14,7 +14,7 @@ During the lab 2, you will start working on your assignment 1. The TA will expla
 You can clone this repository using the following command:
 
 ```
-https://github.com/SEG2105-uottawa/SEG2105-Lab2.git
+git clone https://github.com/SEG2105-uottawa/SEG2105-Lab2.git
 ```
 
 Group work and partners: In this lab, and all other labs that involve programming, you
@@ -99,19 +99,11 @@ To run the program
 java PointCPTest
 ```
 You can, of course, run the programs using the Eclipse IDE (or your preferred IDE).
-Now create a branch for this lab called `f/lab02`
-
-```
-git checkout -b f/lab02
-```
 
 ## PointCP
 
-All modifications should be done within the `/pointcp` directory
-of your `f/lab02` branch.  When finished, please create a pull request
-back into `master` to clearly highlight the code you have written.
-
-3. By modifying the original version, implement the following designs.
+All modifications should be done within the `/pointcp` directory.
+By modifying the original version, implement the following designs.
 
 * design 2 (edit code in `/design2` directory)
 * design 3 (edit code in `/design3` directory)
