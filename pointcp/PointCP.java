@@ -21,6 +21,8 @@ public class PointCP
    * coordinates that are being dealt with.
    */
   private char typeCoord;
+
+  private int car;
   
   /**
    * Contains the current value of X or RHO depending on the type
