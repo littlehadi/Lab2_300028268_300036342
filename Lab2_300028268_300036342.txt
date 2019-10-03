@@ -1,6 +1,6 @@
 Hady El-Saleh, 300028268
 Ndoye Cheikh Basirou , 300036342
 
-Voice le devoir 1, 
+Voici le devoir 1, 
 
 **  Notez que nous avons eu beaucoup de problèmes avec git et c’est a la dernière minute qu’on a su comment fonctionner git sur avec nos repertoires, donc nous avons pas utiliser github markdown, au lieu nous avons utiliser des pdf***
