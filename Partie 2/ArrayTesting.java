@@ -1,131 +1,95 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Vector;
-import java.util.*;
 
+public class ArrayTesting {
+    static private final int CONST_SIZE = 105999999;
 
-@SuppressWarnings("unchecked")
-public class ArrayTesting{
+    public static void main(String[] args){
+        //part a
+        long start = System.currentTimeMillis();
+        ArrayList<Integer> arrayList = ArrayTesting.genRandomArrayList(CONST_SIZE);
+        long end = System.currentTimeMillis();
+        System.out.println("ArrayList: " + (end-start));
 
-	public static long arrayTest(int elements){
-		int[] performanceArray = new int[elements];
-		long startTime = System.nanoTime();
+        start = System.currentTimeMillis();
+        int[] array = ArrayTesting.genRandomArray(CONST_SIZE);
+        end = System.currentTimeMillis();
+        System.out.println("Array: " + (end-start));
 
-		//Number of runs may vary
-		for(int i = 0; i < elements; i++){
-			int randomNum = new Random().nextInt(10);
-			performanceArray[i] = randomNum;
-		}
+        start = System.currentTimeMillis();
+        Vector<Integer> vector = ArrayTesting.genRandomVector(CONST_SIZE);
+        end = System.currentTimeMillis();
+        System.out.println("Vector: " + (end-start) + "\n");
 
-		long endTime = System.nanoTime();
-		long totalTime = (endTime - startTime);
-		System.out.println("Total Time: " + totalTime);
-		return totalTime;
-	}
+        //part b
+        start = System.currentTimeMillis();
+        ArrayTesting.sumArrayList(arrayList);
+        end = System.currentTimeMillis();
+        System.out.println("ArrayList Iterator: " + (end-start));
 
-	public static long arrayListTest(int elements){
-		ArrayList<Integer> arrayList = new ArrayList();
-		long startTime = System.nanoTime();
+        start = System.currentTimeMillis();
+        ArrayTesting.sumArray(array);
+        end = System.currentTimeMillis();
+        System.out.println("Array Iterator: " + (end-start));
 
-		//Number of runs may vary 
-		for(int i = 0; i < elements; i++){
-			int randomNum = new Random().nextInt(10);
-			arrayList.add(randomNum);
-		}
+        start = System.currentTimeMillis();
+        ArrayTesting.sumVector(vector);
+        end = System.currentTimeMillis();
+        System.out.println("Vector Iterator: " + (end-start));
+    }
 
-		long endTime = System.nanoTime();
-		long totalTime = (endTime - startTime);
-		System.out.println("Total Time: " + totalTime);
-		return totalTime;
-	}
+    private static ArrayList<Integer> genRandomArrayList(int length){
+        ArrayList<Integer> arrayList = new ArrayList<>(length);
 
-	public static long vectorTest(int elements){
-		Vector vector = new Vector();
-		long startTime = System.nanoTime();
-		
-		//Number of runs may vary
-		for(int i = 0; i < elements; i++){
-			int randomNum = new Random().nextInt(10);
-			vector.add(randomNum);
-		}
+        for(int i = 0; i < length; i++){
+            arrayList.add((int) (Math.random()*9));
+        }
 
-		long endTime = System.nanoTime();
-		long totalTime = endTime- startTime;
-		System.out.println("Total Time: " + totalTime);
-		return totalTime;
-	}
+        return arrayList;
+    }
 
-	public static long arrayIteration(int elements){
-		int[] performanceArray = new int[elements];
+    private static int[] genRandomArray(int length){
+        int[] arr = new int[length];
+        for(int i = 0; i < length; i++){
+            arr[i] = (int) (Math.random()*9);
+        }
 
-		//Number of runs may vary
-		for(int i = 0; i < elements; i++){
-			int randomNum = new Random().nextInt(10);
-			performanceArray[i] = randomNum;
-		}
+        return arr;
+    }
 
-		long startTime = System.nanoTime();
-		long sum = 0;
+    private static Vector<Integer> genRandomVector(int length){
+        Vector<Integer> vector = new Vector<>(length);
+        for(int i = 0; i < length; i++){
+            vector.add((int) (Math.random()*9));
+        }
 
-		for(int i = 0; i < elements; i++){
-			sum += performanceArray[i];
-		}
+        return vector;
+    }
 
-		long endTime = System.nanoTime();
-		long totalTime = endTime - startTime;
-		System.out.println("Total time for array loop to sum: " + totalTime + "\n"
-			+ "Sum: " + sum);
-		return sum;
-	}
+    private static long sumArrayList(ArrayList<Integer> arrayList){
+        Iterator<Integer> iterator = arrayList.iterator();
+        long sum = 0;
+        while(iterator.hasNext()){
+            sum += iterator.next();
+        }
+        return sum;
+    }
 
-	public static long arrayListIteration(int elements){
-		ArrayList<Integer> arrayList = new ArrayList();
+    private static long sumArray(int[] array){
+        long sum = 0;
+        for(int i = 0; i < array.length; i++){
+            sum += array[i];
+        }
+        return sum;
+    }
 
-		//Number of runs may vary 
-		for(int i = 0; i < elements; i++){
-			int randomNum = new Random().nextInt(10);
-			arrayList.add(randomNum);
-		}
-
-		long sum = 0;
-		Iterator<Integer> iterator = arrayList.iterator();
-		long startTime = System.nanoTime();
-
-		while(iterator.hasNext()){
-			sum += iterator.next();
-		}
-
-		long endTime = System.nanoTime();
-		long totalTime = endTime - startTime;
-		System.out.println("Total time for arrayList iterator to sum: " + totalTime + "\n"
-			+ "Sum: " + sum);
-		return sum;
-	}
-
-	public static long vectorIteration(int elements){
-		Vector vector = new Vector();
-		long sum = 0;
-
-		//Number of runs may vary
-		for(int i = 0; i < elements; i++){
-			int randomNum = new Random().nextInt(10);
-			vector.add(randomNum);
-		}
-
-		Iterator<Integer> iterator = vector.iterator();
-		long startTime = System.nanoTime();
-
-		while(iterator.hasNext()){
-			sum += iterator.next();
-		}
-
-		long endTime = System.nanoTime();
-		long totalTime = endTime - startTime;
-		System.out.println("Total time for vector iterator to sum: " + totalTime + "\n"
-			+ "Sum: " + sum);
-		return sum;
-	}
-
-	public static void main(String[] args){
-		}
+    private static long sumVector(Vector<Integer> vector){
+        Iterator<Integer> iterator = vector.iterator();
+        long sum = 0;
+        while(iterator.hasNext()){
+            sum += iterator.next();
+        }
+        return sum;
+    }
 }
